@@ -1,11 +1,16 @@
 package br.com.caelum.leilao.test;
 
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import static org.hamcrest.Matchers.*;
 
 import java.util.List;
 
+import org.hamcrest.core.AnyOf;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -79,8 +84,8 @@ public class TesteDoAvaliador {
 
 		leiloeiro.avalia(leilao);
 
-		assertEquals(3000.0, leiloeiro.getMaiorLance(), 0.0001);
-		assertEquals(1000.0, leiloeiro.getMenorLance(), 0.0001);
+        assertThat(leiloeiro.getMenorLance(), equalTo(250.0));
+        assertThat(leiloeiro.getMaiorLance(), equalTo(400.0));
 	}
 
 	@Test
@@ -90,7 +95,6 @@ public class TesteDoAvaliador {
     			constroi();
 
         leiloeiro.avalia(leilao);
-
         assertEquals(1000.0, leiloeiro.getMaiorLance(), 0.0001);
         assertEquals(1000.0, leiloeiro.getMenorLance(), 0.0001);
     }
@@ -171,32 +175,37 @@ public class TesteDoAvaliador {
 
 	@Test
 	public void naoDeveAceitarMaisDoQue5LancesDeUmMesmoUsuario() {
-		Leilao leilao = new Leilao("Macbook Pro 15");
-
-		leilao.propoe(new Lance(jose, 2000.0));
-		leilao.propoe(new Lance(yin, 3000.0));
-		leilao.propoe(new Lance(jose, 4000.0));
-		leilao.propoe(new Lance(yin, 5000.0));
-		leilao.propoe(new Lance(jose, 6000.0));
-		leilao.propoe(new Lance(yin, 7000.0));
-		leilao.propoe(new Lance(jose, 8000.0));
-		leilao.propoe(new Lance(yin, 9000.0));
-		leilao.propoe(new Lance(jose, 10000.0));
-		leilao.propoe(new Lance(yin, 11000.0));
+		
+		Leilao leilao = new CriadorDeLeilao().para("Macbook Pro 15").
+				lance(jose, 2000.0).
+				lance(yin, 3000.0).
+				lance(jose, 4000.0).
+				lance(yin, 5000.0).
+				lance(jose, 6000.0).
+				lance(yin, 7000.0).
+				lance(jose, 8000.0).
+				lance(yin, 9000.0).
+				lance(jose, 10000.0).
+				lance(yin, 11000.0).
+				constroi();
+	
 
 		// deve ser ignorado
+
 		leilao.propoe(new Lance(jose, 12000.0));
 
 		assertEquals(10, leilao.getLances().size());
-		assertEquals(11000, leilao.getLances().get(leilao.getLances().size() - 1).getValor(), 0.0001);
+		int ultimo = leilao.getLances().size()-1;
+
 
 	}
 
 	@Test
 	public void dobraLanceTeste() {
-		Leilao leilao = new Leilao("Carro");
-		leilao.propoe(new Lance(yin, 3000));
-		leilao.propoe(new Lance(jose, 5000));
+		Leilao leilao = new CriadorDeLeilao().para("Carro").
+				lance(yin, 3000).
+				lance(jose, 5000).
+				constroi();
 		leilao.dobrarLance(yin);
 		assertEquals(6000, leilao.getLances().get(2).getValor(), 0.0001);
 		assertEquals(3, leilao.getLances().size());
@@ -204,7 +213,7 @@ public class TesteDoAvaliador {
 
 	@Test
 	public void naoDeveDobrarCasoNaoHajaLanceAnterior() {
-		Leilao leilao = new Leilao("Macbook Pro 15");
+		Leilao leilao = new CriadorDeLeilao().para("Macbook Pro 42").constroi();
 
 		leilao.dobrarLance(jose);
 
