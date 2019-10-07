@@ -8,6 +8,9 @@ public class Usuario {
 	public Usuario(String nome) {
 		this(0, nome);
 	}
+//	public Usuario () {
+//		this.nome = "Fulano";
+//	}
 
 	public Usuario(int id, String nome) {
 		this.id = id;
