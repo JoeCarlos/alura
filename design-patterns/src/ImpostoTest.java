@@ -9,7 +9,7 @@ public class ImpostoTest {
 	private CalculadorDeImposto calculador;
 	@Before
 	public void setUp() {
-	CalculadorDeImposto calculador = new CalculadorDeImposto();
+	calculador = new CalculadorDeImposto();
 	orcamento = new Orcamento(100.0);
 	}
 			
@@ -17,7 +17,7 @@ public class ImpostoTest {
 	public void deveCalcularICMS() {
 		imposto = new ICMS();
 		calculador.realizaCalculo(orcamento, imposto);
-		assertEquals(10.0, calculador.getValor(),0.0001);
+		assertEquals(55.00, calculador.getValor(),0.0001);
 	}
 	
 	@Test 
@@ -27,4 +27,26 @@ public class ImpostoTest {
 		assertEquals(6, calculador.getValor(),0.0001);
 	}
 	
+	@Test 
+	public void deveCalcularICCCMenor1000() {
+		imposto = new ICCC();
+		calculador.realizaCalculo(orcamento, imposto);
+		assertEquals(5.0, calculador.getValor(),0.001);
+	}
+	
+	@Test 
+	public void deveCalcularICCCMaior1000Menor3000() {
+		imposto = new ICCC();
+		orcamento = new Orcamento(2000);
+		calculador.realizaCalculo(orcamento, imposto);
+		assertEquals(140, calculador.getValor(),0.001);
+	}
+	
+	@Test 
+	public void deveCalcularICCCMaior3000() {
+		imposto = new ICCC();
+		orcamento = new Orcamento(10000);
+		calculador.realizaCalculo(orcamento, imposto);
+		assertEquals(830, calculador.getValor(),0.001);
+	}
 }

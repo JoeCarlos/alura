@@ -1,11 +1,12 @@
 
 public class CalculadorDeImposto {
-	private double icms;
+	double valor;
 	public void realizaCalculo(Orcamento orcamento, Imposto imposto) {
-		 this.icms = imposto.calcula(orcamento);
+		valor  = imposto.calcula(orcamento);
+		System.out.println("Total de Imposto devido: " + valor);
 	}
 	public double getValor() {
-		return this.icms;
+		return this.valor;
 	}
 	 
 }
