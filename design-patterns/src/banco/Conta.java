@@ -1,8 +1,9 @@
+package banco;
 
 public class Conta {
 	private double saldo;
-	
-	public Conta (double saldo) {
+	private String titular;
+	public Conta (String titular, double saldo) {
 		this.saldo = saldo;
 	}
 
@@ -12,6 +13,10 @@ public class Conta {
 	
 	public void deposita(double valor) {
 		this.saldo += valor;
+	}
+
+	public String getTitular() {
+		return titular;
 	}
 	
 }

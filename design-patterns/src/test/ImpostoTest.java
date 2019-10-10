@@ -1,8 +1,16 @@
+package test;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import desconto.Orcamento;
+import imposto.ICCC;
+import imposto.ICMS;
+import imposto.ISS;
+import imposto.Imposto;
+import servico.CalculadorDeImposto;
 public class ImpostoTest {
 	
 	private Orcamento orcamento;

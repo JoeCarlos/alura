@@ -1,4 +1,6 @@
+package imposto;
 
+import desconto.Orcamento;
 
 public class ISS implements Imposto{
 	@Override

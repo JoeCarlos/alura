@@ -1,5 +1,8 @@
+package desconto;
 
 import java.util.Random;
+
+import banco.Conta;
 
 public class Moderado implements Investimento {
 	private Random random;
