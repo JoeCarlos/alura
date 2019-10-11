@@ -3,6 +3,8 @@ package banco;
 public class Conta {
 	private double saldo;
 	private String titular;
+	private String agencia;
+	private String numero;
 	public Conta (String titular, double saldo) {
 		this.saldo = saldo;
 		this.titular = titular;
@@ -20,4 +22,12 @@ public class Conta {
 		return titular;
 	}
 	
+	public String getAgencia() {
+		return this.agencia;
+	}
+
+	public String getNumero() {
+		// TODO Auto-generated method stub
+		return this.numero;
+	}
 }

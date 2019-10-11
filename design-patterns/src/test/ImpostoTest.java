@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import desconto.Orcamento;
+import dominio.Orcamento;
 import imposto.ICCC;
 import imposto.ICMS;
 import imposto.ISS;
@@ -57,5 +57,10 @@ public class ImpostoTest {
 		orcamento = new Orcamento(10000);
 		calculador.realizaCalculo(orcamento, imposto);
 		assertEquals(830, calculador.getValor(),0.001);
+	}
+	@Test
+	public void calculaIcmsEIss() {
+		imposto = new ICMS(new ISS());
+
 	}
 }

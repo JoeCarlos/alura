@@ -1,5 +1,5 @@
 package servico;
-import desconto.Orcamento;
+import dominio.Orcamento;
 import imposto.Imposto;
 
 public class CalculadorDeImposto {

@@ -1,9 +1,15 @@
 package imposto;
 
-import desconto.Orcamento;
+import dominio.Orcamento;
 
-public class ICCC implements Imposto {
+public class ICCC extends Imposto {
 
+	public ICCC() {}
+	public ICCC(Imposto outrImposto) {
+		super(outrImposto);
+	}
+	
+	
 	@Override
 	public double calcula(Orcamento orcamento) {
 		double resultado = 0;
