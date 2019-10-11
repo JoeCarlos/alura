@@ -5,6 +5,7 @@ public class Conta {
 	private String titular;
 	public Conta (String titular, double saldo) {
 		this.saldo = saldo;
+		this.titular = titular;
 	}
 
 	public double getSaldo() {

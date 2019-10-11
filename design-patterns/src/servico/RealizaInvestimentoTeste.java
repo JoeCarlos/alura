@@ -6,7 +6,7 @@ import banco.Conta;
 public class RealizaInvestimentoTeste {
 	@Before
 	public void setUp() {
-		Conta conta = new Conta(1000);
+		Conta conta = new Conta("Joe",1000);
 		//Conta contaMock = mock(Conta.class);
 	}
 }
