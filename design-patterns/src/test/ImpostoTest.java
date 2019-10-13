@@ -10,6 +10,7 @@ import imposto.ICCC;
 import imposto.ICMS;
 import imposto.ISS;
 import imposto.Imposto;
+import imposto.ImpostoMuitoAlto;
 import servico.CalculadorDeImposto;
 public class ImpostoTest {
 	
@@ -60,7 +61,23 @@ public class ImpostoTest {
 	}
 	@Test
 	public void calculaIcmsEIss() {
-		imposto = new ICMS(new ISS());
-
+		imposto = new ICMS(new ISS(new ICMS()));
+		calculador.realizaCalculo(orcamento, imposto);
+		System.out.println(calculador.getValor());
+		assertEquals(61, calculador.getValor(),0.001);
+	}
+	
+	@Test
+	public void ImpostoMuitoAltoTest() {
+		imposto = new ImpostoMuitoAlto();
+		calculador.realizaCalculo(orcamento, imposto);
+		assertEquals(20, calculador.getValor(), 0.001);
+	}
+	
+	@Test
+	public void ImpostoMuitoAltoEIcmsTest() {
+		imposto = new ImpostoMuitoAlto(new ICMS());
+		calculador.realizaCalculo(orcamento, imposto);
+		assertEquals(75, calculador.getValor(), 0.001);
 	}
 }
