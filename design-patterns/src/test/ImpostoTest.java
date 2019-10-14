@@ -8,6 +8,7 @@ import org.junit.Test;
 import dominio.Orcamento;
 import imposto.ICCC;
 import imposto.ICMS;
+import imposto.ICPP;
 import imposto.ISS;
 import imposto.Imposto;
 import imposto.ImpostoMuitoAlto;
@@ -61,9 +62,8 @@ public class ImpostoTest {
 	}
 	@Test
 	public void calculaIcmsEIss() {
-		imposto = new ICMS(new ISS(new ICMS()));
+		imposto = new ICMS(new ISS());
 		calculador.realizaCalculo(orcamento, imposto);
-		System.out.println(calculador.getValor());
 		assertEquals(61, calculador.getValor(),0.001);
 	}
 	
@@ -79,5 +79,11 @@ public class ImpostoTest {
 		imposto = new ImpostoMuitoAlto(new ICMS());
 		calculador.realizaCalculo(orcamento, imposto);
 		assertEquals(75, calculador.getValor(), 0.001);
+	}
+	@Test
+	public void IcppEIkcvDecoratorTest() {
+		imposto = new ICPP(new ICMS());
+		calculador.realizaCalculo(orcamento, imposto);
+		assertEquals(60, calculador.getValor(), 0.001);
 	}
 }

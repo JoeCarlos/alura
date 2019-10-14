@@ -1,6 +1,6 @@
 package desconto;
+import orcamento.Orcamento;
 import servico.Item;
-import servico.Orcamento;
 
 public class DescontoPorVendaCasada implements Desconto {
 

@@ -4,7 +4,12 @@ import dominio.Orcamento;
 
 public class ICPP extends TemplateDeImpostoCondicional{
 
-
+	public ICPP() {	}
+	
+	public ICPP (Imposto outroImposto) {
+		super(outroImposto);
+}
+	
 	@Override
 	public double maximaTaxacao(Orcamento orcamento) {
 		return orcamento.getValor()*0.07;

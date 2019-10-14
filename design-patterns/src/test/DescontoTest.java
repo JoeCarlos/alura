@@ -3,8 +3,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-import servico.Orcamento;
+
 import builder.CriadorOrcamento;
+import orcamento.Orcamento;
 import servico.CalculadorDeDesconto;
 import servico.Item;
 public class DescontoTest {

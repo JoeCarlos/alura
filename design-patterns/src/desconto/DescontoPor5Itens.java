@@ -1,5 +1,5 @@
 package desconto;
-import servico.Orcamento;
+import orcamento.Orcamento;
 public class DescontoPor5Itens implements Desconto{
 
 	private Desconto proximo;

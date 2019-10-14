@@ -1,6 +1,6 @@
 package desconto;
+import orcamento.Orcamento;
 import servico.*;
-import servico.Orcamento;
 public class SemDesconto implements Desconto {
 
 	@Override

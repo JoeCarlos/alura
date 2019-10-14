@@ -4,6 +4,7 @@ import desconto.DescontoPor5Itens;
 import desconto.DescontoPorMaisDe500;
 import desconto.DescontoPorVendaCasada;
 import desconto.SemDesconto;
+import orcamento.Orcamento;
 public class CalculadorDeDesconto {
 	public double calculaDesconto(Orcamento orcamento) {
 		Desconto d1 = new DescontoPor5Itens();

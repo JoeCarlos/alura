@@ -1,13 +1,17 @@
 package banco;
 
+import java.util.Calendar;
+
 public class Conta {
 	private double saldo;
 	private String titular;
 	private String agencia;
 	private String numero;
-	public Conta (String titular, double saldo) {
+	private Calendar dataAbertura;
+	public Conta (String titular, double saldo, Calendar dataAbertura) {
 		this.saldo = saldo;
 		this.titular = titular;
+		this.dataAbertura = dataAbertura;
 	}
 
 	public double getSaldo() {
@@ -29,5 +33,10 @@ public class Conta {
 	public String getNumero() {
 		// TODO Auto-generated method stub
 		return this.numero;
+	}
+
+	public Calendar getDataAbertura() {
+		// TODO Auto-generated method stub
+		return dataAbertura.getInstance();
 	}
 }

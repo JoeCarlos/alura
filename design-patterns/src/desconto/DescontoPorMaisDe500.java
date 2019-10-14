@@ -1,5 +1,5 @@
 package desconto;
-import servico.Orcamento;
+import orcamento.Orcamento;
 
 public class DescontoPorMaisDe500 implements Desconto {
 	
