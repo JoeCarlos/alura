@@ -14,6 +14,11 @@ public class Conta {
 		this.dataAbertura = dataAbertura;
 	}
 
+	public Conta(String string, int i) {
+		this.saldo = saldo;
+		this.titular = titular;
+	}
+
 	public double getSaldo() {
 		return this.saldo;
 	}
