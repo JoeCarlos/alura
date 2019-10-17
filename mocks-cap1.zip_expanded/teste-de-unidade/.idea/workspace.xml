@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="390446b9-0c72-4531-bddd-13a84cc72b83" name="Default Changelist" comment="" />
+    <list default="true" id="390446b9-0c72-4531-bddd-13a84cc72b83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../design-patterns/src/banco/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../design-patterns/src/banco/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../design-patterns/src/desconto/Moderado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../design-patterns/src/imposto/Moderado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../design-patterns/src/notas/fiscais/NFBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../design-patterns/src/notas/fiscais/NFBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../design-patterns/src/notas/fiscais/NotaFiscal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../design-patterns/src/notas/fiscais/NotaFiscal.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projetos/Java/BancoAps" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570385300799</updated>
       <workItem from="1570385310762" duration="104000" />
+      <workItem from="1571318741163" duration="102000" />
     </task>
     <servers />
   </component>
@@ -74,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
