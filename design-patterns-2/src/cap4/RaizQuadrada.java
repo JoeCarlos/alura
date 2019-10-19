@@ -10,7 +10,16 @@ public class RaizQuadrada implements Expressao {
 	
 	@Override
 	public int avalia() {
-		return (int) Math.sqrt(expressao.avalia());
+		return (int) Math.sqrt(getExpressao().avalia());
+	}
+
+	@Override
+	public void aceita(Visitor visitor) {
+		visitor.visitaRaizQuadrada(this);
+	}
+
+	public Expressao getExpressao() {
+		return expressao;
 	}
 
 }
