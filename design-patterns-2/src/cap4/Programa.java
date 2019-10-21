@@ -2,15 +2,11 @@ package cap4;
 
 public class Programa {
 	public static void main(String[] args) {
-//		Expressao esquerda = new Subtracao(new Numero(10),new Numero(9));
-//		Expressao direita =  new Soma (new Numero(10), new Soma(new Numero(30), new Numero(1)));
-//		
-//		Expressao conta = new Soma(esquerda, direita);
+		Expressao esquerda = new Subtracao(new Numero(10),new Numero(9));
+		Expressao direita =  new Soma (new Numero(10), new Soma(new Numero(30), new Numero(1)));
 		
-		Expressao esquerda = new Subtracao(new Numero(10), new Numero(5));
-		Expressao direita = new Soma(new Numero(2), new Numero(10));
-
 		Expressao conta = new Soma(esquerda, direita);
+		
 		
 //		int resultado = conta.avalia();		
 		
