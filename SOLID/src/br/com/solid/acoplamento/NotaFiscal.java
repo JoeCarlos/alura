@@ -15,6 +15,10 @@ public class NotaFiscal {
 		this(0, valorBruto, impostos);
 	}
 
+	public NotaFiscal() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
