@@ -33,7 +33,7 @@ public class Subtracao implements Expressao{
 	@Override
 	public void aceita(Visitor visitor) {
 			visitor.visitaSubtracao(this);
-		
+		System.out.println("aceita");
 	}
 
 }
