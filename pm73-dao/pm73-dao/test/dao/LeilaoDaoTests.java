@@ -140,40 +140,53 @@ public class LeilaoDaoTests {
 		
 		assertEquals(0, porPeriodo.size());
 	}
+
+	Eu gostaria de continuar seguindo a Formação Java, faltam os seguintes cursos:  https://cursos.alura.com.br/formacao-java 
+	Collections
+	Maven: Build do zero a web
+	Servlets (Este o Luciano desaconselhou)
+	Banco de dados com Java (JPA2 e Hibernate)
+	Spring e MVC
+	Java 8 https://www.alura.com.br/curso-online-java8-lambdas 
+	Novidades Java   https://www.alura.com.br/curso-online-java-novos-recursos 
+	Java e XML     https://www.alura.com.br/curso-online-xml-java 
+	A formação Expert em Integração de Aplicações Java (JAX-RS, SOAP e WSDL) https://www.alura.com.br/formacao-integracao-aplicacoes-java 
+	Formação Java EE https://www.alura.com.br/formacao-java-ee 
+	Minha ideia é ter uma base bem sólida em Back-end com Java, conhecendo bem suas integrações, para poder trabalhar de forma independente com Sistemas em Java.
 	
-    @Test
-    public void deveRetornarLeiloesDisputados() {
-        Usuario mauricio = new Usuario("Mauricio", "mauricio@aniche.com.br");
-        Usuario marcelo = new Usuario("Marcelo", "marcelo@aniche.com.br");
-
-        Leilao leilao1 = new LeilaoBuilder()
-                .comDono(marcelo)
-                .comValor(3000.0)
-                .comLance(Calendar.getInstance(), mauricio, 3000.0)
-                .comLance(Calendar.getInstance(), marcelo, 3100.0)
-                .constroi();
-
-        Leilao leilao2 = new LeilaoBuilder()
-                .comDono(mauricio)
-                .comValor(3200.0)
-                .comLance(Calendar.getInstance(), mauricio, 3000.0)
-                .comLance(Calendar.getInstance(), marcelo, 3100.0)
-                .comLance(Calendar.getInstance(), mauricio, 3200.0)
-                .comLance(Calendar.getInstance(), marcelo, 3300.0)
-                .comLance(Calendar.getInstance(), mauricio, 3400.0)
-                .comLance(Calendar.getInstance(), marcelo, 3500.0)
-                .constroi();
-
-        usuarioDao.salvar(marcelo);
-        usuarioDao.salvar(mauricio);
-        leilaoDao.salvar(leilao1);
-        leilaoDao.salvar(leilao2);
-
-        List<Leilao> leiloes = leilaoDao.disputadosEntre(2500, 3500);
-
-        assertEquals(1, leiloes.size());
-        assertEquals(3200.0, leiloes.get(0).getValorInicial(), 0.00001);
-    }
+//    @Test
+//    public void deveRetornarLeiloesDisputados() {
+//        Usuario mauricio = new Usuario("Mauricio", "mauricio@aniche.com.br");
+//        Usuario marcelo = new Usuario("Marcelo", "marcelo@aniche.com.br");
+//
+//        Leilao leilao1 = new LeilaoBuilder()
+//                .comDono(marcelo)
+//                .comValor(3000.0)
+//                .comLance(Calendar.getInstance(), mauricio, 3000.0)
+//                .comLance(Calendar.getInstance(), marcelo, 3100.0)
+//                .constroi();
+//
+//        Leilao leilao2 = new LeilaoBuilder()
+//                .comDono(mauricio)
+//                .comValor(3200.0)
+//                .comLance(Calendar.getInstance(), mauricio, 3000.0)
+//                .comLance(Calendar.getInstance(), marcelo, 3100.0)
+//                .comLance(Calendar.getInstance(), mauricio, 3200.0)
+//                .comLance(Calendar.getInstance(), marcelo, 3300.0)
+//                .comLance(Calendar.getInstance(), mauricio, 3400.0)
+//                .comLance(Calendar.getInstance(), marcelo, 3500.0)
+//                .constroi();
+//
+//        usuarioDao.salvar(marcelo);
+//        usuarioDao.salvar(mauricio);
+//        leilaoDao.salvar(leilao1);
+//        leilaoDao.salvar(leilao2);
+//
+//        List<Leilao> leiloes = leilaoDao.disputadosEntre(2500, 3500);
+//
+//        assertEquals(1, leiloes.size());
+//        assertEquals(3200.0, leiloes.get(0).getValorInicial(), 0.00001);
+//    }
 	
 	
 }

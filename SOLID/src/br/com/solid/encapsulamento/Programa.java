@@ -12,6 +12,7 @@ public class Programa {
 		Fatura fatura = new Fatura("Joe", 50000);
 		Pagamento pagamento = new Pagamento(200, MeioDePagamento.BOLETO);
 		fatura.AdcionaPagamentos(new Pagamento(200, MeioDePagamento.BOLETO));
+
 		processadorDeBoletos.processa(boletos, fatura);
 	}
 }
