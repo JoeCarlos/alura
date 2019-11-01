@@ -21,7 +21,10 @@ public class AlunoTest {
         		System.out.println(aluno);});	
         
         Set<Aluno> alunos = javaColecoes.getAlunos();    
-        alunos.add(new Aluno("Joe", 306));
+//        alunos.add(new Aluno("Joe", 306));
+        
+        javaColecoes.estaMatriculado(a1);
+        System.out.println(javaColecoes.estaMatriculado(a1));
 	} 
 		
     
