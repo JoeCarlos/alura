@@ -25,11 +25,11 @@ public class Turma {
 
 	private List<Aluno> alunos;
 	
-	public Turma(LocalDate inicio, LocalDate fim, Curso curso, List<Aluno> alunos) {
+	public Turma(LocalDate inicio, LocalDate fim, Curso curso, Aluno ...aluno) {
 		this.inicio = inicio;
 		this.fim = fim;
 		this.curso = curso;
-		this.alunos = List.of(alunos);
+		this.alunos = List.of(aluno);
 	}
 	
 }

@@ -1,15 +1,7 @@
 package br.com.alura.escola;
 
-import java.time.LocalDate;
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import br.com.alura.escola.modelo.Curso;
-import br.com.alura.escola.modelo.Turma;
 import br.com.alura.escola.servico.AlunoServico;
 import br.com.alura.escola.servico.TurmaServico;
 
