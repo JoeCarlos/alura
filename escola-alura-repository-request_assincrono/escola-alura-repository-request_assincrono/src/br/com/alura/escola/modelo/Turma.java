@@ -29,8 +29,8 @@ public class Turma {
 	public String toString() {
 		return "\nInicio da turma: " + inicio
 				+ "\nFim da turma: " + fim
-				+ "\nCurso: " + curso.getNome()
-				+ "\n Livro: " + curso.getNomeLivro()
+				+ "\nCurso: " + curso.nome
+				+ "\nLivro: " + curso.livro.getNome()
 				+ "\nAluno> " + alunos;
 	}
 }

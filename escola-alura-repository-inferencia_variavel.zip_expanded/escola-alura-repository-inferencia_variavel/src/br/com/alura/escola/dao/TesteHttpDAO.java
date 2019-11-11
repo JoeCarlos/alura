@@ -1,4 +1,4 @@
-package br.com.alura.escola;
+package br.com.alura.escola.dao;
 
 import java.io.BufferedReader;
 import java.io.IOException;
