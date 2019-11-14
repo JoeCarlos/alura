@@ -43,7 +43,7 @@ public class PopulaConta {
 		conta5.setAgencia("1234");
 		conta5.setTitular("Alexandre Duarte");
 
-		// persistindo as contas
+//		 persistindo as contas
 		manager.persist(conta1);
 		manager.persist(conta2);
 		manager.persist(conta3);

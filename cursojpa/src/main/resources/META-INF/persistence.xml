@@ -5,9 +5,10 @@
  <persistence-unit name="financas" transaction-type="RESOURCE_LOCAL">
   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
   <class>financas.modelo.Conta</class>
+  <class>financas.modelo.Movimentacao</class>
   <properties>
    <property name="javax.persistence.jdbc.driver"   value="org.hsqldb.jdbcDriver"               />
-   <property name="javax.persistence.jdbc.url"      value="jdbc:hsqldb:file:H:"    />
+   <property name="javax.persistence.jdbc.url"      value="jdbc:hsqldb:file:H:\Banco"    />
    <property name="javax.persistence.jdbc.user"     value="sa"                                  />
    <property name="javax.persistence.jdbc.password" value=""                                    />
 

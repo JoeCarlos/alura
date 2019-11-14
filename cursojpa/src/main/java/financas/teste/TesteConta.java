@@ -10,10 +10,10 @@ public class TesteConta {
 	public static void main(String[] args) {
 //		Conta conta = new Conta("Joe", "456", "Caixa", "sss");
 		Conta conta = new Conta();
-		conta.setAgencia("546");
-		conta.setBanco("Bradesco");
-		conta.setNumero("12323");
-		conta.setTitular("Joe");
+		conta.setAgencia("5434");
+		conta.setBanco("Itau");
+		conta.setNumero("123343");
+		conta.setTitular("Yin");
 		
 		System.out.println(conta);
 		
@@ -22,7 +22,9 @@ public class TesteConta {
 		em.createQuery("FROM Conta", Conta.class).getResultList();
 		
 		em.getTransaction().begin();
-		em.persist(conta);
+		conta = em.find(Conta.class, 2);
+		em.remove(conta);
+		conta.setBanco("Caixa");
 		em.getTransaction().commit();
 	
 		em.close();
