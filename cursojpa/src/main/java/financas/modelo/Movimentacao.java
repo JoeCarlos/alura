@@ -95,5 +95,9 @@ public class Movimentacao {
 		this.conta = conta;
 	}
 	
+	@Override
+	public String toString() {
+		return id + " - " + valor + " - " + tipo + " - " + data + " - " + descricao + " - " + conta.getTitular();
+	}
 	
 }
