@@ -3,6 +3,10 @@ package financas.modelo;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import java.util.List;
+
 import javax.persistence.Entity;
 
 
@@ -16,6 +20,8 @@ public class Conta {
 	private String numero;
 	private String banco;
 	private String agencia;
+	@OneToMany(mappedBy = "conta")
+	private List<Movimentacao> movimentacoes;
 
 	public Conta(String titular, String numero, String banco, String agencia) {
 		this.titular = titular;
@@ -68,6 +74,10 @@ public class Conta {
 	@Override
 	public String toString() {
 		return titular + " - " + numero + " - " + banco + " agencia ";
+	}
+
+	public List<Movimentacao> getMovimentacoes() {
+		return movimentacoes;
 	}
 
 }

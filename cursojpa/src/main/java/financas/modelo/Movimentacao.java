@@ -15,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.type.descriptor.java.UUIDTypeDescriptor.ToStringTransformer;
+
 @Entity
 public class Movimentacao {
 
@@ -97,7 +99,10 @@ public class Movimentacao {
 	
 	@Override
 	public String toString() {
-		return id + " - " + valor + " - " + tipo + " - " + data + " - " + descricao + " - " + conta.getTitular();
+		return id + " - " + valor + " - " + tipo + " - " + data.getTime() + " - " + descricao + " - " + conta.getTitular();
+	}
+	public Movimentacao() {
+		// TODO Auto-generated constructor stub
 	}
 	
 }
