@@ -2,6 +2,7 @@ package financas.modelo;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,9 +10,12 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.type.descriptor.java.UUIDTypeDescriptor.ToStringTransformer;
 
 @Entity
 public class Movimentacao {
@@ -33,6 +37,17 @@ public class Movimentacao {
 	
 	@ManyToOne
 	private Conta conta;
+	
+	@ManyToMany
+	private List<Categoria> categoria;
+
+	public List<Categoria> getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(List<Categoria> categoria) {
+		this.categoria = categoria;
+	}
 
 	public Integer getId() {
 		return id;
@@ -82,5 +97,12 @@ public class Movimentacao {
 		this.conta = conta;
 	}
 	
+	@Override
+	public String toString() {
+		return id + " - " + valor + " - " + tipo + " - " + data.getTime() + " - " + descricao + " - " + conta.getTitular();
+	}
+	public Movimentacao() {
+		// TODO Auto-generated constructor stub
+	}
 	
 }

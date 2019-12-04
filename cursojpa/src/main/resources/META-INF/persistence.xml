@@ -6,9 +6,13 @@
   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
   <class>financas.modelo.Conta</class>
   <class>financas.modelo.Movimentacao</class>
+  <class>financas.modelo.Categoria</class>
+  <class>financas.modelo.Cliente</class>
+  
   <properties>
    <property name="javax.persistence.jdbc.driver"   value="org.hsqldb.jdbcDriver"               />
    <property name="javax.persistence.jdbc.url"      value="jdbc:hsqldb:file:C:\Users\joseo\OneDrive\Documentos\Alura"    />
+   <property name="javax.persistence.jdbc.url"      value="jdbc:hsqldb:file:H:\Banco;hsqldb.lock_file=false"    />
    <property name="javax.persistence.jdbc.user"     value="sa"                                  />
    <property name="javax.persistence.jdbc.password" value=""                                    />
 

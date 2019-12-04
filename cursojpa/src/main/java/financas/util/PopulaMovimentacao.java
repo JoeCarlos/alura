@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 import financas.modelo.Conta;
 import financas.modelo.Movimentacao;
@@ -12,7 +14,7 @@ import financas.modelo.TipoMovimentacao;
 public class PopulaMovimentacao {
 
 	public static void main(String[] args) {
-
+		
 		EntityManager manager = new JPAUtil().getEntityManager();
 
 		manager.getTransaction().begin();
@@ -145,7 +147,6 @@ public class PopulaMovimentacao {
 		manager.getTransaction().commit();
 
 		manager.close();
-
 	}
 
 }
