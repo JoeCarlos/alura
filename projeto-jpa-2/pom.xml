@@ -8,7 +8,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <name>Projeto JPA 2</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <spring.version>5.1.5.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
     </properties>
     <dependencies>
         <dependency>
